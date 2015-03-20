@@ -10,11 +10,35 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @@class_user = @user
-    client = get_dropbox_client
-    unless client
+    @client = get_dropbox_client
+    unless @client
         redirect_to(:action => 'auth_start') and return
     end
-    account_info = client.account_info
+    @account_info = @client.account_info
+  end
+
+  def upload
+    @client = get_dropbox_client
+    unless @client
+        redirect_to(:action => 'auth_start') and return
+    end
+
+    begin
+        # Upload the POST'd file to Dropbox, keeping the same name
+        resp = @client.put_file(params[:file].original_filename, params[:file].read)
+        #render :text => "Upload successful.  File now at #{resp['path']}"
+        flash[:success] = "Upload successful.  File now at #{resp['path']}"
+    rescue DropboxAuthError => e
+        session.delete(:access_token)  # An auth error means the access token is probably bad
+        logger.info "Dropbox auth error: #{e}"
+        #render :text => "Dropbox auth error"
+        flash[:danger] = "Dropbox auth error"
+    rescue DropboxError => e
+        logger.info "Dropbox API error: #{e}"
+        #render :text => "Dropbox API error"
+        flash[:danger] = "Dropbox API error"
+    end
+    redirect_to(:back)
   end
 
   def new
