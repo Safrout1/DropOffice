@@ -10,8 +10,25 @@
     </section>
   </aside>
 </div>
-
 <br/> <%= form_tag({:action => :upload}, :multipart => true) do %>
 <%= file_field_tag 'file' %>
 <%= submit_tag 'Upload' %>
 <% end %>
+
+<%= form_tag({:action => :search}) do %>
+<%= text_field_tag 'query' %> 
+<%= submit_tag 'Search for a file' %>
+<% end %>
+
+<% metadata = @client.metadata('/') %>
+
+<% metadata["contents"].each do |key, value| %>
+<% if (key["is_dir"]) %>
+<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
+<%= key["path"][1..-1] %>
+<%else %>
+<%= key["path"][1..-1]%>
+<%= "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe%> 
+<%end%>
+<br/>
+<%end%>
