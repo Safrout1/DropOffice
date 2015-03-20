@@ -10,10 +10,11 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  #get  "dropbox/main"
+  post "users/search" 
   post "users/upload"
   get  "users/auth_start"
   get  "users/auth_finish"
+  get 'users/dropbox_download'# => 'users#dropbox_download' as: 'dropbox_download'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -17,6 +17,42 @@ class UsersController < ApplicationController
     @account_info = @client.account_info
   end
 
+  def search
+    @client = get_dropbox_client
+    unless @client
+        redirect_to(:action => 'auth_start') and return
+    end
+    begin
+      @file = @client.search('/', params[:query])
+      render :text => "#{@file}" and return
+    rescue DropboxAuthError => e
+        session.delete(:access_token)  # An auth error means the access token is probably bad
+        logger.info "Dropbox auth error: #{e}"
+        #render :text => "Dropbox auth error"
+        flash[:danger] = "Dropbox auth error"
+    rescue DropboxError => e
+        logger.info "Dropbox API error: #{e}"
+        #render :text => "Dropbox API error"
+        flash[:danger] = "Dropbox API error"
+    end
+  end
+
+  def dropbox_path_change
+    @client = get_dropbox_client
+    unless @client
+        redirect_to(:action => 'auth_start') and return
+    end
+    metadata = @client.metadata(params[:path])
+  end
+ 
+  def dropbox_download
+    @client = get_dropbox_client
+    unless @client
+        redirect_to(:action => 'auth_start') and return
+    end
+    redirect_to @client.shares(params[:path])["url"]
+  end
+
   def upload
     @client = get_dropbox_client
     unless @client
@@ -28,6 +64,7 @@ class UsersController < ApplicationController
         resp = @client.put_file(params[:file].original_filename, params[:file].read)
         #render :text => "Upload successful.  File now at #{resp['path']}"
         flash[:success] = "Upload successful.  File now at #{resp['path']}"
+        @x = @client.metadata(params[:file])
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
         logger.info "Dropbox auth error: #{e}"
