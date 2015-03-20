@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
+      #redirect_to url_for(:controller => :dropbox, :action => :main, :user => user)
       redirect_to user
     else
       flash.now[:danger] = 'Invalid email/password combination'
