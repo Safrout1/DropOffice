@@ -6,6 +6,12 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h2> <%= "Dropbox mail " + @account_info['email'] %> </h2>
     </section>
   </aside>
 </div>
+
+<br/> <%= form_tag({:action => :upload}, :multipart => true) do %>
+<%= file_field_tag 'file' %>
+<%= submit_tag 'Upload' %>
+<% end %>
