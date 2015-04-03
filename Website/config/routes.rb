@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   post "users/upload"
   get  "users/auth_start"
   get  "users/auth_finish"
-  get 'users/dropbox_download'# => 'users#dropbox_download' as: 'dropbox_download'
+  get 'users/dropbox_download' => 'users#dropbox_download', as: 'dropbox_download'
+  get 'users/dropbox_change' => 'users#dropbox_change', as: 'dropbox_change'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

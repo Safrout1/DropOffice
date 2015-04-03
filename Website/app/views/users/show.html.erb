@@ -10,6 +10,7 @@
     </section>
   </aside>
 </div>
+
 <br/> <%= form_tag({:action => :upload}, :multipart => true) do %>
 <%= file_field_tag 'file' %>
 <%= submit_tag 'Upload' %>
@@ -20,15 +21,21 @@
 <%= submit_tag 'Search for a file' %>
 <% end %>
 
-<% metadata = @client.metadata('/') %>
-
-<% metadata["contents"].each do |key, value| %>
+<% @metadata["contents"].each do |key, value| %>
 <% if (key["is_dir"]) %>
 <%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
-<%= key["path"][1..-1] %>
+<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"])%>
 <%else %>
 <%= key["path"][1..-1]%>
-<%= "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe%> 
+<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank" %>
 <%end%>
 <br/>
 <%end%>
+
+<% unless params[:path] == '/' || params[:path] == nil %>
+<!-- If we're not at the root page or if the path paramter is not empty -->
+<% new_path = params[:path][0..(params[:path].rindex(params[:path].split('/')[-1])) - 1 ] %>
+<!-- Oh boy, this is complicated. Assume we have a path abc/xyz. When we press the back button, we need to strip the path to just abc. The above code eliminates all characters after the last slash, including the slash itself. rindex helps you to find the rightmost index for a certain substring, in our case, "xyx"), and then we delete it. -->
+<%= link_to "Go back", dropbox_path_change_path(path: new_path) , remote: true%>
+<!-- Using AJAX, we call the change path action with the new path passed in as the parameter -->
+<% end %>
