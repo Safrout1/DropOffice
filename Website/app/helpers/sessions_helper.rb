@@ -31,12 +31,14 @@ module SessionsHelper
   def forget(user)
     user.forget
     cookies.delete(:user_id)
+    cookies.delete(:access_token)
     cookies.delete(:remember_token)
   end
 
   def log_out
   	forget(current_user)
     session.delete(:user_id)
+    session.delete(:access_token)
     @current_user = nil
   end
 end

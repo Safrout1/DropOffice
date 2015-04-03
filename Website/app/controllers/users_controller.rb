@@ -1,20 +1,25 @@
 require 'dropbox_sdk'
 require 'securerandom'
 
-APP_KEY = "z7ktftzujsts6za"
+APP_KEY = "z7ktftzujsts6za" 
 APP_SECRET = "f57rj5da65qg3ja"
 
 
 class UsersController < ApplicationController
-  @@class_user = nil
   def show
     @user = User.find(params[:id])
-    @@class_user = @user
     @client = get_dropbox_client
     unless @client
         redirect_to(:action => 'auth_start') and return
     end
     @account_info = @client.account_info
+    if (session[:lol])
+        @metadata = @client.metadata(session[:lol])
+    else
+        @metadata = @client.metadata('/')
+    end
+    session[:lol2] = session[:lol]
+    session[:lol] = nil
   end
 
   def search
@@ -23,8 +28,12 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     begin
-      @file = @client.search('/', params[:query])
-      render :text => "#{@file}" and return
+      @metadata = @client.search('/', params[:query])
+      @user = User.find_by(id: session['user_id'])
+      @account_info = @client.account_info
+      redirect_to  @metadata
+      #render :text => "#{@file}" and return
+      #redirect_to(:back)
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
         logger.info "Dropbox auth error: #{e}"
@@ -37,12 +46,17 @@ class UsersController < ApplicationController
     end
   end
 
-  def dropbox_path_change
+  def dropbox_change
     @client = get_dropbox_client
     unless @client
         redirect_to(:action => 'auth_start') and return
     end
-    metadata = @client.metadata(params[:path])
+    x = params[:path]
+    @metadata = @client.metadata(params[:path])
+    #render :text => "#{@metadata}"
+    @user = User.find_by(id: session['user_id'])
+    session[:lol] = x
+    redirect_to @user
   end
  
   def dropbox_download
@@ -58,13 +72,11 @@ class UsersController < ApplicationController
     unless @client
         redirect_to(:action => 'auth_start') and return
     end
-
     begin
         # Upload the POST'd file to Dropbox, keeping the same name
-        resp = @client.put_file(params[:file].original_filename, params[:file].read)
+        resp = @client.put_file("#{session[:lol2]}/#{params[:file].original_filename}", params[:file].read)
         #render :text => "Upload successful.  File now at #{resp['path']}"
         flash[:success] = "Upload successful.  File now at #{resp['path']}"
-        @x = @client.metadata(params[:file])
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
         logger.info "Dropbox auth error: #{e}"
@@ -75,7 +87,9 @@ class UsersController < ApplicationController
         #render :text => "Dropbox API error"
         flash[:danger] = "Dropbox API error"
     end
-    redirect_to(:back)
+    session[:lol] = session[:lol2]
+    @user = User.find_by(id: session['user_id'])
+    redirect_to @user
   end
 
   def new
@@ -109,7 +123,7 @@ class UsersController < ApplicationController
         end
     end
 
-    def get_web_auth()
+    def get_web_auth
         redirect_uri = url_for(:action => 'auth_finish')
         DropboxOAuth2Flow.new(APP_KEY, APP_SECRET, redirect_uri, session, :dropbox_auth_csrf_token)
     end
@@ -126,7 +140,8 @@ class UsersController < ApplicationController
         begin
             access_token, user_id, url_state = get_web_auth.finish(params)
             session[:access_token] = access_token
-            redirect_to @@class_user
+            @user = User.find_by(id: session['user_id'])
+            redirect_to @user
         rescue DropboxOAuth2Flow::BadRequestError => e
             render :text => "Error in OAuth 2 flow: Bad request: #{e}"
         rescue DropboxOAuth2Flow::BadStateError => e
