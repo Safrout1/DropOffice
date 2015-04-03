@@ -13,6 +13,10 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     @account_info = @client.account_info
+    if (session[:query1] && session[:query1] != "Please enter a value")
+        @search = @client.search('/', session[:query1])
+        session[:query1] = nil
+    end
     if (session[:lol])
         @metadata = @client.metadata(session[:lol])
     else
@@ -28,9 +32,11 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     begin
-      @metadata = @client.search('/', params[:query])
+      session[:query1] = params[:query]
+      if session[:query1] == "Please enter a value"
+        session[:query1] = nil
+      end
       @user = User.find_by(id: session['user_id'])
-      @account_info = @client.account_info
       redirect_to  @user
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
