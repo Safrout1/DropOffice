@@ -31,9 +31,7 @@ class UsersController < ApplicationController
       @metadata = @client.search('/', params[:query])
       @user = User.find_by(id: session['user_id'])
       @account_info = @client.account_info
-      redirect_to  @metadata
-      #render :text => "#{@file}" and return
-      #redirect_to(:back)
+      redirect_to  @user
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
         logger.info "Dropbox auth error: #{e}"
