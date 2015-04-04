@@ -36620,3 +36620,4 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-03 17:16:34 +0200
+  [1m[36mUser Load (31.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]

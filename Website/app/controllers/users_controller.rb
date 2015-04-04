@@ -13,17 +13,7 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     @account_info = @client.account_info
-    if (session[:query1] && session[:query1] != "Please enter a value")
-        @search = @client.search('/', session[:query1])
-        session[:query1] = nil
-    end
-    if (session[:lol])
-        @metadata = @client.metadata(session[:lol])
-    else
-        @metadata = @client.metadata('/')
-    end
-    session[:lol2] = session[:lol]
-    session[:lol] = nil
+    @metadata = @client.metadata('/')
   end
 
   def search
@@ -32,12 +22,10 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     begin
-      session[:query1] = params[:query]
-      if session[:query1] == "Please enter a value"
-        session[:query1] = nil
-      end
-      @user = User.find_by(id: session['user_id'])
-      redirect_to  @user
+        @search = @client.search('/', params[:query])
+        respond_to do |format|
+            format.js {}
+        end
     rescue DropboxAuthError => e
         session.delete(:access_token)  # An auth error means the access token is probably bad
         logger.info "Dropbox auth error: #{e}"
@@ -55,12 +43,10 @@ class UsersController < ApplicationController
     unless @client
         redirect_to(:action => 'auth_start') and return
     end
-    x = params[:path]
     @metadata = @client.metadata(params[:path])
-    #render :text => "#{@metadata}"
-    @user = User.find_by(id: session['user_id'])
-    session[:lol] = x
-    redirect_to @user
+    respond_to do |format|
+            format.js {}
+    end
   end
  
   def dropbox_download
@@ -77,8 +63,12 @@ class UsersController < ApplicationController
         redirect_to(:action => 'auth_start') and return
     end
     begin
+        x = nil
+        if params[:path]
+            x = "#{params[:path]}/"
+        end
         # Upload the POST'd file to Dropbox, keeping the same name
-        resp = @client.put_file("#{session[:lol2]}/#{params[:file].original_filename}", params[:file].read)
+        resp = @client.put_file("#{x}#{params[:file].original_filename}", params[:file].read)
         #render :text => "Upload successful.  File now at #{resp['path']}"
         flash[:success] = "Upload successful.  File now at #{resp['path']}"
     rescue DropboxAuthError => e
@@ -91,7 +81,6 @@ class UsersController < ApplicationController
         #render :text => "Dropbox API error"
         flash[:danger] = "Dropbox API error"
     end
-    session[:lol] = session[:lol2]
     @user = User.find_by(id: session['user_id'])
     redirect_to @user
   end
