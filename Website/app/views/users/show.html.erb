@@ -11,47 +11,39 @@
   </aside>
 </div>
 
-<br/> <%= form_tag({:action => :upload}, :multipart => true) do %>
+<br/>
+<%= form_tag({:action => :upload}, :multipart => true) do %>
 <%= file_field_tag 'file' %>
+<%= text_field_tag 'path' %>
 <%= submit_tag 'Upload' %>
 <% end %>
 
-<%= form_tag({:action => :search}) do %>
+<br/>
+
+<%= form_tag({:action => :search}, :remote => true) do %>
 <%= text_field_tag 'query' %> 
 <%= submit_tag 'Search for a file' %>
 <% end %>
 
-<% if @search %>
-<%= "Search Results"%>
-<br/>
-<% @search.each do |key, value| %>
-<% if (key["is_dir"]) %>
-<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
-<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"])%>
-<%else %>
-<%= key["path"][1..-1]%>
-<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank" %>
-<%end%>
-<br/>
-<%end%>
-<%else%>
-
-<% @metadata["contents"].each do |key, value| %>
-<% if (key["is_dir"]) %>
-<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
-<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"])%>
-<%else %>
-<%= key["path"][1..-1]%>
-<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank" %>
-<%end%>
-<br/>
-<%end%>
-<%end%>
+<div id="lol">
+	<div>
+		<% @metadata["contents"].each do |key, value| %>
+			<% if (key["is_dir"]) %>
+				<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
+				<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true %>
+			<%else %>
+				<%= key["path"][1..-1]%>
+				<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank"%>
+			<%end%>
+			<br/>
+		<%end%>
+	</div>
+</div>
 
 <% unless params[:path] == '/' || params[:path] == nil %>
-<!-- If we're not at the root page or if the path paramter is not empty -->
-<% new_path = params[:path][0..(params[:path].rindex(params[:path].split('/')[-1])) - 1 ] %>
-<!-- Oh boy, this is complicated. Assume we have a path abc/xyz. When we press the back button, we need to strip the path to just abc. The above code eliminates all characters after the last slash, including the slash itself. rindex helps you to find the rightmost index for a certain substring, in our case, "xyx"), and then we delete it. -->
-<%= link_to "Go back", dropbox_path_change_path(path: new_path) , remote: true%>
-<!-- Using AJAX, we call the change path action with the new path passed in as the parameter -->
+	<!-- If we're not at the root page or if the path paramter is not empty -->
+	<% new_path = params[:path][0..(params[:path].rindex(params[:path].split('/')[-1])) - 1 ] %>
+	<!-- Oh boy, this is complicated. Assume we have a path abc/xyz. When we press the back button, we need to strip the path to just abc. The above code eliminates all characters after the last slash, including the slash itself. rindex helps you to find the rightmost index for a certain substring, in our case, "xyx"), and then we delete it. -->
+	<%= link_to "Go back", dropbox_change_path(path: new_path) , remote: true%>
+	<!-- Using AJAX, we call the change path action with the new path passed in as the parameter -->
 <% end %>
