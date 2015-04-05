@@ -1,10 +1,11 @@
 <% @metadata["contents"].each do |key, value| %>
 	<% if (key["is_dir"]) %>
-		<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
+		<%= "<span class='glyphicon glyphicon-folder-open'></span> ".html_safe %>
 		<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true%>
 	<%else %>
+		<%= "<span class='glyphicon glyphicon-file'></span> ".html_safe %>
 		<%= key["path"][1..-1]%>
-		<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank", :remote => true %>
+		<%= link_to "[#{key["size"]} <span class='glyphicon glyphicon-cloud-download'></span>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank"%>
 	<%end%>
 	<br/>
 <%end%>
