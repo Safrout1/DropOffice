@@ -1,14 +1,16 @@
-<% if @search %>
-	<%= "Search Results"%>
-	<br/>
-	<% @search.each do |key, value| %>
-		<% if (key["is_dir"]) %>
-			<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
-			<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true%>
-		<%else %>
-			<%= key["path"][1..-1]%>
-			<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank" %>
+<ul class="list-group">
+	<div>
+		<h3>Search results</h3>
+		<% @search.each do |key, value| %>
+			<li class="list-group-item">
+				<% if (key["is_dir"]) %>
+					<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
+					<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true%>
+				<%else %>
+					<%= key["path"][1..-1]%>
+					<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank" %>
+				<%end%>
+			</li>
 		<%end%>
-		<br/>
-	<%end%>
-<%end%>
+	</div>
+</ul>
