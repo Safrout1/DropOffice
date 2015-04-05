@@ -1,43 +1,52 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-      <h2> <%= "Dropbox mail " + @account_info['email'] %> </h2>
-    </section>
-  </aside>
-</div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"> <%= @user.name %></a>
+		</div>
 
-<br/>
-<%= form_tag({:action => :upload}, :multipart => true) do %>
-<%= file_field_tag 'file' %>
-<%= text_field_tag 'path' %>
-<%= submit_tag 'Upload' %>
-<% end %>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><%= gravatar_for @user %> </li>
+				<li><%= "Dropbox mail "%><br/><%=@account_info['email'] %></li>
+			</ul>
 
-<br/>
+			<%= form_tag({:action => :upload}, :multipart => true) do %>
+			<%= file_field_tag 'file' %>
+			<%= text_field_tag 'path' %>
+			<%= submit_tag 'Upload' %>
+			<% end %>
 
-<%= form_tag({:action => :search}, :remote => true) do %>
-<%= text_field_tag 'query' %> 
-<%= submit_tag 'Search for a file' %>
-<% end %>
+			<%= form_tag({:action => :search}, :remote => true) do %>
+			<%= text_field_tag 'query' %> 
+			<%= submit_tag 'Search for a file' %>
+			<% end %>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>
 
 <div id="lol">
-	<div>
-		<% @metadata["contents"].each do |key, value| %>
-			<% if (key["is_dir"]) %>
-				<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
-				<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true %>
-			<%else %>
-				<%= key["path"][1..-1]%>
-				<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank"%>
+	<ul class="list-group">
+		<div>
+			<% @metadata["contents"].each do |key, value| %>
+				<li class="list-group-item">
+					<% if (key["is_dir"]) %>
+						<%= "<div class='glyphicon glyphicon-folder-open'></div> ".html_safe %>
+						<%= link_to key["path"][1..-1], dropbox_change_path(path: key["path"]), :remote => true %>
+					<%else %>
+						<%= key["path"][1..-1]%>
+						<%= link_to "[#{key["size"]} <div class='glyphicon glyphicon-cloud-download'></div>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank"%>
+					<%end%>
+				</li>
 			<%end%>
-			<br/>
-		<%end%>
-	</div>
+		</div>
+	</ul>
 </div>
 
 <% unless params[:path] == '/' || params[:path] == nil %>

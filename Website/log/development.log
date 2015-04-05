@@ -36621,3 +36621,3350 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/defaults.js
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-03 17:16:34 +0200
   [1m[36mUser Load (31.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+
+
+Started GET "/" for ::1 at 2015-04-05 11:34:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (21.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (50.0ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (15.0ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 1852ms (Views: 1820.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/assets/logo-f33b24406969c9a499974f74ae78f551.png" for ::1 at 2015-04-05 11:34:57 +0200
+
+
+Started GET "/login" for ::1 at 2015-04-05 11:35:10 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (193.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 494ms (Views: 493.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-04-05 11:35:15 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UCvYxseak+Cnm7OAzdIqTGfBLTu97UT7kl2JX0V0zr7Jkdwv2YqRXb0QPdxIIlS08NQstdPrwZjZYp9xAkp7bw==", "session"=>{"email"=>"Safrout@dropoffice.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (22.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "safrout@dropoffice.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 188ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:35:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/users/auth_start
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth_start" for ::1 at 2015-04-05 11:35:15 +0200
+Processing by UsersController#auth_start as HTML
+Redirected to https://www.dropbox.com/1/oauth2/authorize?client_id=z7ktftzujsts6za&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fusers%2Fauth_finish&state=3MGR2Mwy%2Brb2MlCipSXM0A%3D%3D
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth_finish?state=3MGR2Mwy%2Brb2MlCipSXM0A%3D%3D&code=8UyxynXlAc0AAAAAAAAA4s2gYrH-DCBbdaFrkCx6TBE" for ::1 at 2015-04-05 11:38:58 +0200
+Processing by UsersController#auth_finish as HTML
+  Parameters: {"state"=>"3MGR2Mwy+rb2MlCipSXM0A==", "code"=>"8UyxynXlAc0AAAAAAAAA4s2gYrH-DCBbdaFrkCx6TBE"}
+  [1m[35mUser Load (7.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2672ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:39:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3612ms (Views: 450.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:39:05 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:45:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (13.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4610ms (Views: 446.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:45:16 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:46:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (45.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4706ms (Views: 285.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:46:33 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:48:11 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 5417ms (Views: 246.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:48:17 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:49:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 6615ms (Views: 251.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:49:24 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:54:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (14.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4047ms (Views: 444.4ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:54:26 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:54:58 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3589ms (Views: 382.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:55:02 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:55:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3681ms (Views: 256.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:30 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:31 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:31 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:55:31 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:55:31 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:55:31 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:56:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3467ms (Views: 261.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:56:05 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:56:51 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5394ms (Views: 243.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:56:56 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:58:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4300ms (Views: 259.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:58:32 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:58:51 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3484ms (Views: 261.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:58:54 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 11:59:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3468ms (Views: 242.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 11:59:52 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 11:59:53 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:01:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3416ms (Views: 278.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:01:11 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:01:12 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:01:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3291ms (Views: 258.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:01:46 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:02:17 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (16.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3837ms (Views: 336.1ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:02:21 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:02:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3905ms (Views: 246.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:02:48 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:03:15 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3457ms (Views: 248.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:03:19 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:03:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3487ms (Views: 261.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:03:34 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:03:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4868ms (Views: 253.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:03:53 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:04:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3634ms (Views: 262.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:04:39 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:05:28 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5741ms (Views: 247.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:05:34 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:07:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3786ms (Views: 255.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:07:37 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:07:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4527ms (Views: 258.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:07:49 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:08:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3378ms (Views: 219.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:08:49 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:09:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3488ms (Views: 256.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:09:25 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:10:02 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 7927ms (Views: 327.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:10:10 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:11:21 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3766ms (Views: 375.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:11:25 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:11:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5549ms (Views: 258.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:11:56 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:12:26 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (36.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (38.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 6993ms (Views: 341.4ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:12:33 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:13:03 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (13.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (15.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 7143ms (Views: 403.0ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:13:10 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:13:45 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (13.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (15.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 6269ms (Views: 457.5ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:13:51 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:14:13 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (13.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (15.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3631ms (Views: 411.0ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:14:16 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3792ms (Views: 361.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:14:20 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:15:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4214ms (Views: 260.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:15:33 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:15:53 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3604ms (Views: 261.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:15:56 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:16:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3534ms (Views: 250.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:16:27 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:16:38 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3711ms (Views: 260.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:16:41 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:16:42 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:16:49 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3650ms (Views: 271.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:16:52 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:16:53 +0200
+
+
+Started GET "/" for ::1 at 2015-04-05 12:19:58 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (16.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 436ms (Views: 421.3ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:20:08 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 6797ms (Views: 338.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:20:15 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:20:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (34.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (36.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3668ms (Views: 256.9ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:20:47 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:22:59 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5351ms (Views: 334.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:23:05 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:25:34 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (39.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 6496ms (Views: 254.6ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:25:40 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:40 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:40 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:40 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:25:41 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:25:54 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (46.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3475ms (Views: 261.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:25:58 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:26:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3246ms (Views: 260.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:26:21 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:26:27 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 3281ms (Views: 266.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:26:30 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:26:31 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:29:16 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (14.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 5636ms (Views: 438.5ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:29:22 +0200
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:33:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (14.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3914ms (Views: 349.8ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:33:37 +0200
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:35:35 +0200
+
+
+Started GET "/users/dropbox_change?path=%2FACM+presentations" for ::1 at 2015-04-05 12:36:13 +0200
+Processing by UsersController#dropbox_change as JS
+  Parameters: {"path"=>"/ACM presentations"}
+  Rendered users/_dropbox_change.html.erb (2.3ms)
+  Rendered users/dropbox_change.js.erb (5.6ms)
+Completed 200 OK in 1929ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:36:22 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (35.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4190ms (Views: 315.1ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:36:26 +0200
+
+
+Started POST "/users/search" for ::1 at 2015-04-05 12:36:30 +0200
+Processing by UsersController#search as JS
+  Parameters: {"utf8"=>"✓", "query"=>"impartial", "commit"=>"Search for a file"}
+  Rendered users/_search.html.erb (1.8ms)
+  Rendered users/search.js.erb (4.6ms)
+Completed 200 OK in 1551ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2015-04-05 12:36:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 4150ms (Views: 151.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom-caa0e9dc1b7e5cc84464246ac2b34baf.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/application-e8eaead1598b1caf2ac89ec0e7cd43aa.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-05 12:36:40 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-05 12:36:40 +0200
