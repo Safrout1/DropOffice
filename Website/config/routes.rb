@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-  post "users/search" 
+  post "users/search"
+  post "users/folder_gdeed"  
   post "users/upload"
   get  "users/auth_start"
   get  "users/auth_finish"
