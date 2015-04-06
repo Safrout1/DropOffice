@@ -10,31 +10,36 @@
 	<div class="col-xs-3">
 		<form role="form" accept-charset="UTF-8" action="/users/search" data-remote="true" method="post">
 				<input name="utf8" type="hidden" value="✓">
+			<div class="form-group">
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="Search" name="query" id="query">
 				<span class="input-group-btn">
 				<button type="submit" class="btn btn-danger" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
 			</div>
+			</div>
 		</form>
-		
-		<br>
+
 		<form role="form" accept-charset="UTF-8" action="/users/folder_gdeed" data-remote="true"  method="post">
 			<input name="utf8" type="hidden" value="✓">
+			<div class="form-group">
 			<div class="input-group">	
 				<input type="text" class="form-control" placeholder="New Folder Path" name="path" id="path">
 				<span class="input-group-btn">
 				<button type="submit" class="btn btn-danger" id="gdeed"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></button></span>
 			</div>
+			</div>
 		</form>
-		<br>
+
 		<form role="form" accept-charset="UTF-8" action="/users/upload" method="post">
 				<input name="utf8" type="hidden" value="✓">
+			<div class="form-group">
 			<div class="input-group">
 				<input type="text" class="form-control" placeholder="File Path" name="path" id="path">
 				<span class="input-group-btn">
 				<button type="submit" class="btn btn-danger" ><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button></span>
 			</div>
 				<input type="file" class="form-control" placeholder="Choose File" name="file" id="file">
+			</div>
 		</form>
 	</div>
 
