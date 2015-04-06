@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     unless @client
         redirect_to(:action => 'auth_start') and return
     end
-    redirect_to @client.shares(params[:path])["url"]
+    @downloaded_file = @client.get_file_and_metadata(params[:path])
   end
 
   def upload

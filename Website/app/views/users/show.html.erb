@@ -58,7 +58,7 @@
 							<%else %>
 								<%= "<span class='glyphicon glyphicon-file'></span>".html_safe %>
 								<%= key["path"][1..-1]%>
-								<%= link_to "[#{key["size"]} <span class='glyphicon glyphicon-cloud-download'></span>]".html_safe, dropbox_download_path(path: key["path"]), :target => "_blank"%>
+								<%= link_to "[#{key["size"]} <span class='glyphicon glyphicon-cloud-download'></span>]".html_safe, dropbox_download_path(path: key["path"])%>
 							<%end%>
 						</li>
 					<%end%>
