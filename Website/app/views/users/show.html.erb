@@ -28,7 +28,23 @@
 				<button type="submit" class="btn btn-danger" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 			</div>
 		</form>
+
+		<form class="navbar-form" role="create" accept-charset="UTF-8" action="/users/folder_gdeed" data-remote="true"  method="post">
+			<div class="form-group">
+				<input name="utf8" type="hidden" value="✓">
+				<input type="text" class="form-control" placeholder="Write the path" name="path" id="path">
+				<button type="submit" class="btn btn-danger" id="gdeed"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></button>
+			</div>
+		</form>
+
 	</div>
+
+	<script type="text/javascript">
+		$('#gdeed').click(function() {
+			location.reload();
+		});
+	</script>
+
 
 	<div class="col-md-9">
 		<div id="lol">

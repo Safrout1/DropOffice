@@ -38,6 +38,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def folder_gdeed
+    @client = get_dropbox_client
+    unless @client
+        redirect_to(:action => 'auth_start') and return
+    end
+    @client.file_create_folder("/#{params[:path]}")
+    @user = User.find_by(id: session['user_id'])
+    respond_to do |format|
+            format.js {}
+    end
+    #redirect_to @user
+  end
+
   def dropbox_change
     @client = get_dropbox_client
     unless @client
