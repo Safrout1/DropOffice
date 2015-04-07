@@ -10,15 +10,15 @@
 <div class="row">
 
 	<div class="col-md-3">
-		<form class="navbar-form" role="upload" accept-charset="UTF-8" action="/users/upload" method="post">
+		<form class="navbar-form" enctype="multipart/form-data" role="upload" accept-charset="UTF-8" action="/users/upload" method="post">
 			<div class="form-group">
 				<input name="utf8" type="hidden" value="✓">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 				<input type="file" class="form-control" placeholder="Choose file" name="file" id="file" style="width: 15.47em">
 				<input type="text" class="form-control" placeholder="Write the path" name="path" id="path">
 				<button type="submit" class="btn btn-danger" ><span class="glyphicon glyphicon-upload" aria-hidden="true"></span></button>
 			</div>
 		</form>
-
 
 
 		<form class="navbar-form" role="search" accept-charset="UTF-8" action="/users/search" data-remote="true" method="post">
