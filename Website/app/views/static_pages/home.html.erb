@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <html>
   <body>
-  	<div class="container">
+  	<div class="container center denjar">
     
     <% if logged_in? %>
+    <h1>WHAT?</h1>
+    Are you looking for your <%= link_to "Profile", current_user, id:"lel" %>?
     <% else %>
     	<h1>
     		Welcome to DropOffice!
@@ -12,11 +14,7 @@
     	<h2>
     		One place, everything you need.
   		</h2>
-      <div class="row">
-      <div class="col-xs-4 col-xs-offset-4">
-    	  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary centered" %>
-      </div>
-      </div>
+    	  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-danger" %>
     <% end %>
     </div>
   </body>
