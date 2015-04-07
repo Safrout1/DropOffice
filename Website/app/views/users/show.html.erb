@@ -8,7 +8,7 @@
 
 <div class="row">
 	<div class="col-xs-3">
-		<form class="navbar-form" role="form" accept-charset="UTF-8" action="/users/search" data-remote="true" method="post">
+		<form class="navbar-form" role="search" accept-charset="UTF-8" action="/users/search" data-remote="true" method="post">
 			<div class="form-group">
 			<input name="utf8" type="hidden" value="✓">
 			<div class="input-group">
@@ -20,6 +20,8 @@
 		</form>
 
 		<form class="navbar-form" role="form" accept-charset="UTF-8" action="/users/folder_gdeed" data-remote="true"  method="post">
+
+		<form class="navbar-form" role="search" accept-charset="UTF-8" action="/users/search" data-remote="true" method="post">
 			<div class="form-group">
 			<input name="utf8" type="hidden" value="✓">
 			<div class="input-group">	
@@ -30,9 +32,10 @@
 			</div>
 		</form>
 
-		<form class="navbar-form" role="form" accept-charset="UTF-8" action="/users/upload" method="post">
+		<form class="navbar-form" enctype="multipart/form-data" role="upload" accept-charset="UTF-8" action="/users/upload" method="post">
 			<div class="form-group">
 			<input name="utf8" type="hidden" value="✓">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 			<div class="input-group">
 				<span class="input-group-btn">
 				<span class="btn btn-danger btn-file">
