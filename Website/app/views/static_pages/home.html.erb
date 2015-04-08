@@ -2,15 +2,20 @@
 <!DOCTYPE html>
 <html>
   <body>
-  	<div class="center jumbotron">
+  	<div class="container center denjar">
+    
+    <% if logged_in? %>
+    <h1>WHAT?</h1>
+    Are you looking for your <%= link_to "Profile", current_user, id:"lel" %>?
+    <% else %>
     	<h1>
     		Welcome to DropOffice!
     	</h1>
     	<h2>
-    		Everything you need in one place..
+    		One place, everything you need.
   		</h2>
-    	 <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    	  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-danger" %>
+    <% end %>
     </div>
-    <%= link_to image_tag("logo.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>
   </body>
 </html>
