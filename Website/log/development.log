@@ -41374,3 +41374,699 @@ Started GET "/assets/tinymce/skins/lightgray/content.min.css" for ::1 at 2015-04
 
 
 Started GET "/assets/tinymce/skins/lightgray/fonts/tinymce.woff" for ::1 at 2015-04-08 01:05:56 +0200
+
+
+Started GET "/texteditor" for ::1 at 2015-04-08 22:30:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#texteditor as HTML
+  Rendered static_pages/texteditor.html.erb within layouts/application (77.8ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (20.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 396ms (Views: 383.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/custom-d4fc4ffe44075ab93b683197788a6569.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/application-532b53458f767b6f25190370f5bde3a5.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/tinymce/preinit-f8ab295b9f7ef6fc6df732d409be754f.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/tinymce/tinymce-b30abbd7b32d836c0a3e382959d700ee.js?body=1" for ::1 at 2015-04-08 22:30:19 +0200
+
+
+Started GET "/assets/tinymce-e980a571e524ad97ae6a17dcc57d29bd.js?body=1" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/tinymce/tinymce.min.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+ActionController::RoutingError (No route matches [GET] "/tinymce/tinymce.min.js"):
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/web-console-2.1.1/lib/web_console/middleware.rb:37:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.3ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.8ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.5ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (85.6ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.5ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.8ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/index.html (180.4ms)
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/advlist/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/autolink/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/upload/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/link/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/lists/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/preview/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/charmap/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/print/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/image/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/anchor/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/hr/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/pagebreak/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/searchreplace/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/wordcount/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/visualblocks/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/visualchars/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/insertdatetime/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/media/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/nonbreaking/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/save/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/table/plugin.js" for ::1 at 2015-04-08 22:30:20 +0200
+
+
+Started GET "/assets/tinymce/plugins/contextmenu/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/directionality/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/emoticons/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/template/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/paste/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/textcolor/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/colorpicker/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/plugins/textpattern/plugin.js" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/fonts/tinymce.woff" for ::1 at 2015-04-08 22:30:21 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/application-532b53458f767b6f25190370f5bde3a5.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/custom-d4fc4ffe44075ab93b683197788a6569.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for ::1 at 2015-04-08 22:40:26 +0200
+
+
+Started GET "/users/1" for ::1 at 2015-04-08 22:41:11 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 8147ms (Views: 179.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-04-08 22:41:19 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 4238ms (Views: 151.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-04-08 22:41:23 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3215ms (Views: 162.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/custom-d4fc4ffe44075ab93b683197788a6569.css?body=1" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:26 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/application-532b53458f767b6f25190370f5bde3a5.css?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for ::1 at 2015-04-08 22:41:27 +0200
+
+
+Started GET "/texteditor" for ::1 at 2015-04-08 22:41:34 +0200
+Processing by StaticPagesController#texteditor as HTML
+  Rendered static_pages/texteditor.html.erb within layouts/application (30.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 180ms (Views: 177.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/tinymce/preinit-f8ab295b9f7ef6fc6df732d409be754f.js?body=1" for ::1 at 2015-04-08 22:41:34 +0200
+
+
+Started GET "/tinymce/tinymce.min.js" for ::1 at 2015-04-08 22:41:34 +0200
+
+ActionController::RoutingError (No route matches [GET] "/tinymce/tinymce.min.js"):
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/web-console-2.1.1/lib/web_console/middleware.rb:37:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.0ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.7ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (73.3ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.7ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/index.html (169.6ms)
+
+
+Started GET "/assets/tinymce-e980a571e524ad97ae6a17dcc57d29bd.js?body=1" for ::1 at 2015-04-08 22:41:35 +0200
+
+
+Started GET "/assets/tinymce/tinymce-b30abbd7b32d836c0a3e382959d700ee.js?body=1" for ::1 at 2015-04-08 22:41:35 +0200
+
+
+Started GET "/texteditor" for ::1 at 2015-04-08 22:41:40 +0200
+Processing by StaticPagesController#texteditor as HTML
+  Rendered static_pages/texteditor.html.erb within layouts/application (29.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 175.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-532b53458f767b6f25190370f5bde3a5.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/custom-d4fc4ffe44075ab93b683197788a6569.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/tinymce/preinit-f8ab295b9f7ef6fc6df732d409be754f.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/tinymce/tinymce-b30abbd7b32d836c0a3e382959d700ee.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/assets/tinymce-e980a571e524ad97ae6a17dcc57d29bd.js?body=1" for ::1 at 2015-04-08 22:41:40 +0200
+
+
+Started GET "/tinymce/tinymce.min.js" for ::1 at 2015-04-08 22:41:40 +0200
+
+ActionController::RoutingError (No route matches [GET] "/tinymce/tinymce.min.js"):
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/web-console-2.1.1/lib/web_console/middleware.rb:37:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/zeyadatef/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (157.1ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (92.8ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.9ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.7ms)
+  Rendered vendor/bundle/gems/web-console-2.1.1/lib/web_console/templates/index.html (208.1ms)
+
+
+Started GET "/assets/tinymce/plugins/upload/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/themes/modern/theme.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/autolink/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/lists/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/link/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/advlist/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/image/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/charmap/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/print/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/preview/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/hr/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/anchor/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/pagebreak/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/searchreplace/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/visualblocks/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/wordcount/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/visualchars/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/fullscreen/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/insertdatetime/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/media/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/nonbreaking/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/save/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/table/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/contextmenu/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/directionality/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/emoticons/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/template/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/paste/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/textcolor/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/colorpicker/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/plugins/textpattern/plugin.js" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/skin.min.css" for ::1 at 2015-04-08 22:41:41 +0200
+
+
+Started GET "/assets/tinymce/skins/lightgray/content.min.css" for ::1 at 2015-04-08 22:41:42 +0200
+
+
+Started GET "/" for ::1 at 2015-04-08 23:02:13 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (7.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 375ms (Views: 366.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-08 23:02:14 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 175ms (Views: 174.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/application-532b53458f767b6f25190370f5bde3a5.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/custom-d4fc4ffe44075ab93b683197788a6569.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/assets/application-0294f8eaa61ba08eef89557bb462403f.js?body=1" for ::1 at 2015-04-08 23:02:14 +0200
+
+
+Started GET "/users/1" for ::1 at 2015-04-08 23:06:55 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3759ms (Views: 178.4ms | ActiveRecord: 0.7ms)

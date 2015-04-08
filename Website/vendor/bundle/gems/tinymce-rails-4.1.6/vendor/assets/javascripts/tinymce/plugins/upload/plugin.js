@@ -12,10 +12,11 @@ tinymce.PluginManager.add('upload', function(editor, url) {
                     onclick: 'close'
                 }],
                 body: [
-                    {type: 'textbox', name: 'title', label: 'Title'}
+                    {type: 'textbox', name: 'path', label: 'Write your path:'}
                 ],
                 onsubmit: function(e) {
                     // Insert content when the window form is submitted
+                    var x = editor.getContent();
                     editor.insertContent('Title: ' + e.data.title);
                 }
             });
