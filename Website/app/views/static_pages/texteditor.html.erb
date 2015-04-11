@@ -26,8 +26,9 @@ tinymce.init({
 });
 </script>
 
-<form method="post" action="some place">
+<form method="post" action="file/upload">
     <textarea name="content" style="width:100%"></textarea>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 </form>
 <%= tinymce %>
 

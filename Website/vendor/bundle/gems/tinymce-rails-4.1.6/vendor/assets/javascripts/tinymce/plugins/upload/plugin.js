@@ -16,8 +16,8 @@ tinymce.PluginManager.add('upload', function(editor, url) {
                 ],
                 onsubmit: function(e) {
                     // Insert content when the window form is submitted
-                    var x = editor.getContent();
-                    editor.insertContent('Title: ' + e.data.title);
+                    var content = editor.getContent({format : 'text'});
+                    alert(content)
                 }
             });
         }
