@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @client = get_dropbox_client
+    @profile = true
     unless @client
         redirect_to(:action => 'auth_start') and return
     end

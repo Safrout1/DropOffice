@@ -83,6 +83,9 @@
 	</div>
 
 </div>
+<div class="row" align="center">
+	<%= link_to 'Back', current_user, :style => 'background-color: rgb(221,81,82); padding: 10px; color: white; font-weight: bold; border-radius: 10px; margin:12px;' %>
+</div>
 
 <% unless params[:path] == '/' || params[:path] == nil %>
 	<% new_path = params[:path][0..(params[:path].rindex(params[:path].split('/')[-1])) - 1 ] %>
