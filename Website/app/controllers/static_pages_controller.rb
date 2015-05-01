@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def texteditor
   end
 
+  def docs
+  end
+
   def contact
   end
 
