@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   get  "users/auth_finish"
   get 'users/dropbox_download' => 'users#dropbox_download', as: 'dropbox_download'
   get 'users/dropbox_change' => 'users#dropbox_change', as: 'dropbox_change'
-  resources :users
+  
+  resources :users do
+    resources :forms
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
