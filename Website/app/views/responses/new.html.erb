@@ -1,11 +1,10 @@
 <%provide(:title, "Respond to #{@form.title}")%>
 <p id="original" hidden><%=@form.content%></p>
 
-<form role="respond" action="/forms/<%=(:fid).inspect%>/respond" method="post" id="form">
-	<%=form_authenticity_token%>
-	<!--<input name="authenticity_token" value="" type="hidden">-->
-	<input name="questions" type="hidden" value="<%=@form.content%>">
-	<input name="response" type="hidden" value="" id="responseinput">
+<form role="respond" action="/forms/<%=params[:fid]%>/respond" method="post" id="form">
+	<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+	<input name="response[questions]" type="hidden" value="<%=@form.content%>">
+	<input name="response[response]" type="hidden" value="" id="responseinput">
 </form>
 
 <ol id="resp">

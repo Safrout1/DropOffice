@@ -52761,3 +52761,862 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
   Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
   Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
   Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.5ms)
+
+
+Started POST "/forms/:fid/respond" for 127.0.0.1 at 2015-05-01 23:19:42 +0200
+Processing by ResponsesController#create as HTML
+  Parameters: {"questions"=>"asdfasdfas|#|", "response"=>"adfasdfsadf|#|", "fid"=>":fid"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/shrf/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/shrf/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/shrf/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (14.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (28.3ms)
+
+
+Started GET "/forms/6" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+Processing by ResponsesController#new as HTML
+  Parameters: {"fid"=>"6"}
+  [1m[36mForm Load (0.2ms)[0m  [1mSELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered responses/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 128.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:46 +0200
+
+
+Started GET "/forms/6" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+Processing by ResponsesController#new as HTML
+  Parameters: {"fid"=>"6"}
+  [1m[36mForm Load (0.2ms)[0m  [1mSELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered responses/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:19:47 +0200
+
+
+Started POST "/forms/:fid/respond" for 127.0.0.1 at 2015-05-01 23:19:49 +0200
+Processing by ResponsesController#create as HTML
+  Parameters: {"authenticity_token"=>"eSVrb7/FVrUPzWijioepvDlU8Pd8fVxCeVlrNcb1BeDDwI0MDkIfvXqxFEzZRcMUXKVHzQ7i8F2b8OO1ia+tEA==", "questions"=>"asdfasdfas|#|", "response"=>"sadfsadfsadf|#|", "fid"=>":fid"}
+  [1m[36mForm Load (0.1ms)[0m  [1mSELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Form with 'id'=:fid):
+  app/controllers/responses_controller.rb:8:in `create'
+
+
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.7ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (27.0ms)
+
+
+Started GET "/forms/6" for 127.0.0.1 at 2015-05-01 23:21:56 +0200
+Processing by ResponsesController#new as HTML
+  Parameters: {"fid"=>"6"}
+  [1m[35mForm Load (0.2ms)[0m  SELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered responses/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 130ms (Views: 126.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:21:57 +0200
+
+
+Started POST "/forms/6/respond" for 127.0.0.1 at 2015-05-01 23:22:00 +0200
+Processing by ResponsesController#create as HTML
+  Parameters: {"authenticity_token"=>"YaC4W1KMMSbRDn8/56ioUnY3junAAYJ8RMDN42mt6fnbRV444wt4LqRyA9C0asL6E8Y507KeLmOmaUVjJvdBCQ==", "questions"=>"asdfasdfas|#|", "response"=>"asdfsafsad|#|", "fid"=>"6"}
+  [1m[35mForm Load (0.2ms)[0m  SELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1  [["id", 6]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `permit' for "asdfsafsad|#|":String):
+  app/controllers/responses_controller.rb:15:in `response_params'
+  app/controllers/responses_controller.rb:9:in `create'
+
+
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (6.0ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (18.5ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (31.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 23:24:45 +0200
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-01 23:24:45 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mForm Load (0.2ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE "forms"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 2456ms (Views: 153.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for 127.0.0.1 at 2015-05-01 23:24:48 +0200
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:24:51 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 144ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:26:48 +0200
+
+
+Started GET "/login" for 127.0.0.1 at 2015-05-01 23:26:51 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-01 23:29:07 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mForm Load (0.3ms)[0m  SELECT "forms".* FROM "forms" WHERE "forms"."user_id" = ?  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 2420ms (Views: 167.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for 127.0.0.1 at 2015-05-01 23:29:10 +0200
+
+
+Started POST "/forms/6/respond" for 127.0.0.1 at 2015-05-01 23:29:41 +0200
+Processing by ResponsesController#create as HTML
+  Parameters: {"authenticity_token"=>"YaC4W1KMMSbRDn8/56ioUnY3junAAYJ8RMDN42mt6fnbRV444wt4LqRyA9C0asL6E8Y507KeLmOmaUVjJvdBCQ==", "questions"=>"asdfasdfas|#|", "response"=>"asfdasdfsadfsadf|#|", "fid"=>"6"}
+  [1m[35mForm Load (0.2ms)[0m  SELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1  [["id", 6]]
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `permit' for "asfdasdfsadfsadf|#|":String):
+  app/controllers/responses_controller.rb:15:in `response_params'
+  app/controllers/responses_controller.rb:9:in `create'
+
+
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.7ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.4ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/shrf/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.6ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:29:56 +0200
+
+
+Started GET "/forms/6" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+Processing by ResponsesController#new as HTML
+  Parameters: {"fid"=>"6"}
+  [1m[36mForm Load (0.1ms)[0m  [1mSELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered responses/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered layouts/_header.html.erb (7.8ms)
+Completed 200 OK in 135ms (Views: 128.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:43 +0200
+
+
+Started POST "/forms/6/respond" for 127.0.0.1 at 2015-05-01 23:30:53 +0200
+Processing by ResponsesController#create as HTML
+  Parameters: {"authenticity_token"=>"G8kylpw7fU4D5qhJ89EFVvW2H52bc44UMqeAOWVYqt6hLNT1Lbw0Rnaa1KagE2/+kEeop+nsIgvQDgi5KgICLg==", "response"=>{"questions"=>"asdfasdfas|#|", "response"=>"asfsadf|#|"}, "fid"=>"6"}
+  [1m[36mForm Load (0.2ms)[0m  [1mSELECT  "forms".* FROM "forms" WHERE "forms"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("questions", "response", "form_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["questions", "asdfasdfas|#|"], ["response", "asfsadf|#|"], ["form_id", 6], ["created_at", "2015-05-01 21:30:53.676516"], ["updated_at", "2015-05-01 21:30:53.676516"]]
+  [1m[35m (150.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 151.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-01 23:30:53 +0200
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-05-01 23:30:53 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mForm Load (0.4ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE "forms"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 2491ms (Views: 176.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/login-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/forms-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/application-3dcb30d0a53eebef042d3f01d1a0b30c.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/home-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/custom-81f90c7d3a6a24351f06244836bf5738.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/responses-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/sessions-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/static_pages-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/bootstrap-52ddc9e5c6743cc001357411d58d99c0.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/forms-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/home-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/login-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/responses-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/static_pages-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/application-f56fa53da3f234711f9f08b8a9aff1ff.js?body=1" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-f9ce8fbb6527f40ca42c93b3598e82ca.woff" for 127.0.0.1 at 2015-05-01 23:30:56 +0200
