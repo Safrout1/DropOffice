@@ -50,20 +50,12 @@
 				<!--input type="file" class="form-control" placeholder="Choose File" name="file" id="file"-->
 			</div>
 		</form>
-
-		<!--<%= link_to "Create a new Text File", texteditor_path %>-->
-		<ul class="list-group">
-			<% @user.forms.each do |form| %>
-			    <li class="list-group-item">
-			    	<%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%>
-			    </li>
-			<% end %>
-		</ul>
 		<%= form_for([@user, @user.forms.build]) do |f| %>
 		    <%= f.label :title %><br>
 		    <%= f.text_field :title %>
 		    <%= f.submit %>
 		<% end %>
+		<!--<%= link_to "Create a new Text File", texteditor_path %>-->
 	</div>
 
 	<script type="text/javascript">
@@ -91,6 +83,13 @@
 				</div>
 			</ul>
 		</div>
+		<ul class="list-group">
+			<% @user.forms.each do |form| %>
+				<li class="list-group-item">
+			    	<%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%>
+			    </li>
+			<% end %>
+		</ul>
 	</div>
 
 </div>

@@ -1,16 +1,35 @@
 <% provide(:title, @form.title) %>
 <p id="original" hidden><%=@form.content%></p>
-<div>
-	<textarea id="new"></textarea>
-	<button onclick="addNew();">Add</button>
+<div class="center">
+	<h3>Edit <%=@form.title%></h3>	
 </div>
-<div>
-	<ol id="cells">
-	</ol>
+<div class="row">	
+	<div class="col-xs-3">
+	</div>
+	
+	<div class="col-xs-6">
+		<div>
+			<div class="input-group">
+				<input type='text' id="new" class="form-control"></input>
+				<span class="input-group-btn">
+					<button onclick="addNew();" class="btn btn-danger">Add question</button>
+				</span>
+			</div>
+		</div>
+		<br/>
+		<div>
+			<ul id="cells" class="list-group" >
+			</ul>
+		</div>
+		<div class="center">
+			<button onclick="submitf();" class="btn btn-danger">Save changes</button>
+		</div>
+	</div>
+	
+	<div class="col-xs-3">
+	</div>
 </div>
-<div>
-	<button onclick="submitf();">submit</button>
-</div>
+
 <script type="text/javascript">
 	var lines = "";
 	var count = 0;
@@ -28,15 +47,14 @@
 		$.ajax({
       		type: 'PATCH',
     		url: '/users/'+uid+'/forms/'+fid+'/',
-    		data: { title: fttl, content: lines },
-    		params: { title: fttl, content: lines }
+    		contentType: 'application/json',
+    		data: JSON.stringify({ form: { title: fttl, content: lines } })
     	});
-		alert(lines.toString());
 	}
 
 	function addNew() {
 		if ($('#new').val()) {
-			$('#cells').append('<li id="q'+count+'"><button onclick="deletethis(q'+count+');"> x</button><span>'+$('#new').val()+'</span></li>');
+			$('#cells').append('<li class="list-group-item" id="q'+count+'"><a class="text-right" nohref onclick="deletethis(q'+count+');">x</a> <span>'+$('#new').val()+'</span></li>');
 			$('#new').val("");
 			count++;
 		}
@@ -51,7 +69,7 @@
 		var original = $('#original').text().split('|#|');
 		original.pop();
 		while(original.length>0){
-			$('#cells').append('<li id="q'+count+'"><button onclick="deletethis(q'+count+');"> x</button><span>'+original.shift()+'</span></li>');
+			$('#cells').append('<li class="list-group-item" id="q'+count+'"><a class="text-right" nohref onclick="deletethis(q'+count+');">x</a> <span>'+original.shift()+'</span></li>');
 			count++;
 		}
 	}

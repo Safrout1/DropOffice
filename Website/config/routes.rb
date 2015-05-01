@@ -20,8 +20,13 @@ Rails.application.routes.draw do
   get 'users/dropbox_change' => 'users#dropbox_change', as: 'dropbox_change'
   
   resources :users do
-    resources :forms
+    resources :forms do
+      resources :responses
+    end
   end
+
+  get 'forms/:fid', to: 'responses#new'
+  post 'forms/:fid/respond', to: 'responses#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

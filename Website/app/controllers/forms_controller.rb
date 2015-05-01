@@ -12,15 +12,15 @@ class FormsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @form = @user.forms.create(form_params)
-    render :nothing => true
+    redirect_to '/'
   end
 
   def update
     @user = User.find(params[:user_id])
-    @form = @user.forms.create(form_params)
+    @form = @user.forms.find(params[:id])
    
     if @form.update(form_params)
-      redirect_to 'static_pages#home'
+      redirect_to '/'
     end
   end
 
