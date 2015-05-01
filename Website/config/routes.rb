@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'forms/:fid', to: 'responses#new'
   post 'forms/:fid/respond', to: 'responses#create'
+  get 'thanks', to: 'static_pages#thanks'
+  get 'users/:user_id/forms/:id/view_responses', to: 'forms#view_responses'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

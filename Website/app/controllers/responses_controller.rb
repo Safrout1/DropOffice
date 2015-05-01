@@ -7,7 +7,7 @@ class ResponsesController < ApplicationController
 	def create
 		@form = Form.find(params[:fid])
 		@response = @form.responses.create(response_params)
-		redirect_to '/'
+		redirect_to '/thanks'
 	end
 
 	private

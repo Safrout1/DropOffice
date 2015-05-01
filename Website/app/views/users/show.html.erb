@@ -86,7 +86,7 @@
 		<ul class="list-group">
 			<% @user.forms.each do |form| %>
 				<li class="list-group-item">
-			    	<%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%>
+			    	<%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%> - <%=link_to 'View responses', "#{user_path(@user)}/forms/#{form.id}/view_responses"%>
 			    </li>
 			<% end %>
 		</ul>

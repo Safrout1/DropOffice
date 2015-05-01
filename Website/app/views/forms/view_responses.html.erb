@@ -1,0 +1,32 @@
+<div id="it">
+	<% @responses.each do |response| %>
+		<div id="<%=response.id%>" hidden>
+			<p class="id"><%=response.id%></p>
+			<p class="q"><%=response.questions%></h1>
+			<p class="r"><%=response.response%></p>
+		</div>
+	<%end%>
+</div>
+<div id="thing">
+</div>
+<script type="text/javascript">
+	function init() {
+		$('#it').children().each(function(){
+			var qs = $(this).find('.q').text().split('|#|');
+			var rs = $(this).find('.r').text().split('|#|');
+			var id = $(this).find('.id').text();
+			qs.pop();
+			rs.pop();
+			var appendage = "";
+			var currentq = "";
+			var currentr = "";
+			while(qs.length>0&&rs.length>0){
+				currentq = "<h4>"+qs.shift()+"</h4>";
+				currentp = "<p>"+rs.shift()+"</p>";
+				appendage += '<li>'+currentq+currentp+'</li>';
+			}
+			$('#thing').append('<h4> Response ID: '+id+'</h4><ol>'+appendage+'</ol><hr/>');
+		});
+	}
+</script>
+<script type="text/javascript" defer>init();</script>

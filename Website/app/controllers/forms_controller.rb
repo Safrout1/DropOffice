@@ -24,6 +24,12 @@ class FormsController < ApplicationController
     end
   end
 
+  def view_responses
+    @user = User.find(params[:user_id])
+    @form = @user.forms.find(params[:id])
+    @responses = @form.responses
+  end
+
   private
   	def form_params
       params.require(:form).permit(:title, :content)
