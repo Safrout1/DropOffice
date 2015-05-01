@@ -28,7 +28,9 @@
 		$.ajax({
       		type: 'PATCH',
     		url: '/users/'+uid+'/forms/'+fid+'/',
-    		data: { title: fttl, content: lines }});
+    		data: { title: fttl, content: lines },
+    		params: { title: fttl, content: lines }
+    	});
 		alert(lines.toString());
 	}
 
