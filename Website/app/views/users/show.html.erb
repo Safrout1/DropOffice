@@ -51,12 +51,18 @@
 			</div>
 		</form>
 
-		<%= link_to "Create a new Text File", texteditor_path %>
+		<%= link_to "Create a new Text File", texteditor_path %> </br>
+		<%= link_to "Create a new List", list_path %>
 		
 	</div>
 
 	<script type="text/javascript">
 		$('#gdeed').click(function() {
+			location.reload();
+		});
+	</script>
+	<script type="text/javascript">
+		$('#gdeeda').click(function() {
 			location.reload();
 		});
 	</script>
