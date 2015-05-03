@@ -51,16 +51,21 @@
 			</div>
 		</form>
 
-		<%= link_to "Create a new Text File", texteditor_path %> </br>
-		<%= link_to "Create a new List", list_path %> </br>
-		<%= link_to "Create a new document", docs_path %>
-		
+		<hr/>
+
+		<a class="btn btn-danger btn-block" href="<%=texteditor_path%>">Create a new text File</a>
+		<a class="btn btn-danger btn-block" href="<%=list_path%>">Create a new list</a>
+		<a class="btn btn-danger btn-block" href="<%=docs_path%>">Create a new document</a>
+
+		<hr/>
+
 		<%= form_for([@user, @user.forms.build]) do |f| %>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-		<%= f.submit %>
+		<div class="form-group">
+		<%= f.text_field :title, class:"form-control" %>
+		<%= f.submit "Create a new form", class:"btn btn-block btn-danger"%>
+		</div>
 		<% end %>
-		
+
 	</div>
 
 	<script type="text/javascript">
@@ -68,13 +73,9 @@
 			location.reload();
 		});
 	</script>
-	<script type="text/javascript">
-		$('#gdeeda').click(function() {
-			location.reload();
-		});
-	</script>
 
 	<div class="col-xs-9">
+
 		<div id="lol">
 			<ul class="list-group">
 				<div>
@@ -93,11 +94,17 @@
 				</div>
 			</ul>
 		</div>
-		<ul class="list-group">
-			<% @user.forms.each do |form| %>
+
+		<p>Forms</p>
+		<ul class="list-group" id="reddify">
+			<% @forms.each do |form| %>
+				<%if form.id%>
 				<li class="list-group-item">
-			    	<%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%> - <%=link_to 'View responses', "#{user_path(@user)}/forms/#{form.id}/view_responses"%>
+				<%=link_to 'Responses', "#{user_path(@user)}/forms/#{form.id}/view_responses"%>
+			    • <%=link_to 'Share', "/forms/#{form.id}"%> 
+			    • <%= link_to form.title, "#{user_path(@user)}/forms/#{form.id}"%> 
 			    </li>
+			    <%end%>
 			<% end %>
 		</ul>
 	</div>

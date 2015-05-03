@@ -8,6 +8,7 @@ APP_SECRET = "f57rj5da65qg3ja"
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    @forms = @user.forms
     @client = get_dropbox_client
     unless @client
         redirect_to(:action => 'auth_start') and return
@@ -169,6 +170,8 @@ class UsersController < ApplicationController
 
   def listforms
     @user = User.find(params[:id])
+    @forms = @user.forms
+    @forms.pop
   end
 
   private
