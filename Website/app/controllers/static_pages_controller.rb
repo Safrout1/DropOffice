@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+  def list
+  end
+
   def home
     if logged_in?
     redirect_to current_user
@@ -14,10 +17,13 @@ class StaticPagesController < ApplicationController
   def texteditor
   end
 
-  def contact
+  def docs
   end
 
   def thanks
+  end
+
+  def contact
   end
 
 end

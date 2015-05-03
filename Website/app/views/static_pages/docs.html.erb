@@ -1,0 +1,27 @@
+
+<%= text_area "demo", "tea_poci", "id"=>"myArea2", :rows=>35, :cols=>150%>
+
+<%= submit_tag "Add Editor",:type => 'button', "onclick"=>"addArea2();" %>
+<%= submit_tag "Remove Editor",:type => 'button', "onclick"=>"removeArea2();" %>
+
+<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+
+<script type="text/javascript">
+
+
+//<![CDATA[
+
+var area1, area2;
+
+function addArea2() { area2 = new nicEditor({fullPanel : true}).panelInstance('myArea2');}
+
+function removeArea2() { area2.removeInstance('myArea2'); }
+
+
+bkLib.onDomLoaded(function() { toggleArea1(); });
+
+
+//]]>
+
+
+</script>

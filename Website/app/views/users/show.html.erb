@@ -50,16 +50,26 @@
 				<!--input type="file" class="form-control" placeholder="Choose File" name="file" id="file"-->
 			</div>
 		</form>
+
+		<%= link_to "Create a new Text File", texteditor_path %> </br>
+		<%= link_to "Create a new List", list_path %> </br>
+		<%= link_to "Create a new document", docs_path %>
+		
 		<%= form_for([@user, @user.forms.build]) do |f| %>
-		    <%= f.label :title %><br>
-		    <%= f.text_field :title %>
-		    <%= f.submit %>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+		<%= f.submit %>
 		<% end %>
-		<!--<%= link_to "Create a new Text File", texteditor_path %>-->
+		
 	</div>
 
 	<script type="text/javascript">
 		$('#gdeed').click(function() {
+			location.reload();
+		});
+	</script>
+	<script type="text/javascript">
+		$('#gdeeda').click(function() {
 			location.reload();
 		});
 	</script>
