@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def home
+    if logged_in?
+    redirect_to current_user
+    end
   end
 
   def help
@@ -15,6 +18,9 @@ class StaticPagesController < ApplicationController
   end
 
   def docs
+  end
+
+  def thanks
   end
 
   def contact

@@ -1,0 +1,38 @@
+<%provide(:title, "Respond to #{@form.title}")%>
+<p id="original" hidden><%=@form.content%></p>
+
+<form role="respond" action="/forms/<%=params[:fid]%>/respond" method="post" id="form">
+	<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+	<input name="response[questions]" type="hidden" value="<%=@form.content%>">
+	<input name="response[response]" type="hidden" value="" id="responseinput">
+</form>
+
+<ol id="resp">
+</ol>
+<br/>
+<div class="center">
+	<button class="btn btn-danger" onclick="submitf();">Submit response</button>
+</div>
+
+<script type="text/javascript">
+	function recordAll() {
+		var temp = "";
+		$('#resp').children().each(function(){temp += $(this).find('input').val()+"|#|";});
+		$('#responseinput').val(temp);
+	}
+
+	function submitf() {
+		recordAll();
+		$('#form').delay(100).submit();
+	}
+
+	function init() {
+		var original = $('#original').text().split('|#|');
+		original.pop();
+		while(original.length>0){
+			$('#resp').append(
+				'<li><div><p>'+original.shift()+'</p></div><input type="text" value="" class="form-control"></li>');
+		}
+	}
+</script>
+<script type="text/javascript" defer>init();</script>
