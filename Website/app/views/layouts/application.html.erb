@@ -7,6 +7,28 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
+    <%if :title == "List"%>
+      <style type="text/css">
+        div.listdiv{
+          background-color:#ff5555;
+          color:white;
+          font-size:35px;
+          text-align: center;
+          padding:10px;
+        }
+
+        td.try{
+          border-right:0px solid white;
+          border-left:0px solid white;
+          border-bottom:0px solid white;
+          border-top:0 solid white;
+          background-color:#ff5555;
+          color:black;
+          text-align:left;
+          font-size:20px;
+        }
+      </style>
+    <%end%>
   </head>
   <body>
     <%= render 'layouts/header' %>

@@ -1,0 +1,43 @@
+<%provide :title, 'List'%>
+<script>
+	function addRow(){
+	var table = document.getElementById("table");
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(-1);
+    var cell2 = row.insertCell(0);
+    var cell3 = row.insertCell(1);
+    var text1 = '<input type="text" name="Item" style="width:90%;" value="" id="item" class="form-control"/>';
+    //var button1 = '<input type="button" id="button1" name="edit" value = "edit" style="width:20%;" onclick = "edit(this)" />';
+    var button1 = '<button id="button2" style="width:20%;" onclick = "deleteRow(this);" class="btn btn-danger">Delete</button>';
+
+    cell2.innerHTML = text1;
+    cell3.innerHTML = button1;
+   // cell1.innerHTML = button2;
+}
+
+
+function deleteRow(row)
+{
+    //alert("You will delete this item.");
+    var i = row.parentNode.parentNode.rowIndex;
+    document.getElementById('table').deleteRow(i);
+   //alert("Item deleted!");
+}
+
+function saveList()
+{
+
+}
+
+</script>
+<h3>Create a list</h3>
+
+<table cellpadding="5" id="table">
+<tr>
+    <td class="try" width="50%"> List Items </td>
+ 
+    <td class="try" width="50%"> </td>
+</tr>
+</table>
+<hr>
+<button class="btn btn-danger" value="Add Item" onclick="addRow();">Add item</button> 
